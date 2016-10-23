@@ -8,8 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+typedef enum : NSUInteger
+{
+    Up,
+    Down,
+    Left,
+    Right,
+}TransformObject;
 
+typedef enum : NSUInteger
+{
+    Scale,
+    Shrink,
+}ScaleObject;
+
+@interface ViewController : UIViewController{
+    CGRect originalFrame;
+}
+- (IBAction)upButton:(id)sender;
+- (IBAction)rightButton:(id)sender;
+- (IBAction)downButton:(id)sender;
+- (IBAction)leftButton:(id)sender;
+
+- (IBAction)plusScale:(id)sender;
+- (IBAction)minusScale:(id)sender;
 
 @end
 
